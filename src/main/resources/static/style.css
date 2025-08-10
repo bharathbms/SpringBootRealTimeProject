@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-left a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.nav-left a:hover {
+    text-decoration: underline;
+}
+
+.nav-right h1 {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 40px;
+}
+
+.search-section, .post-section, .form-container, .message-container, .table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button, .btn {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background-color: #45a049;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-container th {
+    background-color: #4CAF50;
+    color: white;
+}
