@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Choices: ${params.Choices}'
+                echo "Choices: ${params.Choices}"
                 echo 'build+++++++++++++++++'
                 script {
                     if (fileExists('target')) {
