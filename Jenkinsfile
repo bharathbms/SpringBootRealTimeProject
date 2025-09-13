@@ -3,9 +3,13 @@ pipeline {
     tools {
             maven 'mymaven'
     }
+    parameters {
+            choice(name: 'Choices', choices: ['Dev', 'PrePod', 'Master'])
+    }
     stages {
         stage('build') {
             steps {
+                echo 'Choices: ${params.Choices}'
                 echo 'build+++++++++++++++++'
                 script {
                     if (fileExists('target')) {
@@ -27,5 +31,5 @@ pipeline {
             success {
                 echo 'I will always say Hello again!'
             }
-        }
+    }
 }
