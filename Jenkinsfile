@@ -8,6 +8,9 @@ pipeline {
     }
     stages {
         stage('build') {
+            when {
+                expression { params.Choices == 'Dev' }
+            }
             steps {
                 echo "Choices: ${params.Choices}"
                 echo 'build+++++++++++++++++'
