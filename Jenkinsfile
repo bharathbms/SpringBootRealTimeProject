@@ -13,15 +13,16 @@ pipeline {
             }
             steps {
                 echo "Choices: ${params.Choices}"
-                echo 'build+++++++++++++++++'
-                script {
-                    if (fileExists('target')) {
-                       echo 'Maven build already exists, skipping mvn clean install'
-                    }
-                    else {
-                       sh 'mvn clean install'
-                    }
+                echo 'Started Build++++++++++'
+                script{
+                    def file = load 'groovyfile.groovy'
+                    file.build()
                 }
+            }
+        }
+        stage('StartApplication'){
+            steps {
+                sh "nohup java -jar target/JobAppFile.jar > app.log 2>&1 &"
             }
         }
         stage('test') {
@@ -31,8 +32,11 @@ pipeline {
         }
     }
     post {
-            success {
-                echo 'I will always say Hello again!'
-            }
+        success {
+           echo 'Build completed'
+        }
+        failure{
+            echo 'Build Failure'
+        }
     }
 }
