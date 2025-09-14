@@ -110,7 +110,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>JobAppFile</finalName>
 	</build>
 
 </project>
