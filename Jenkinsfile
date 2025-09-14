@@ -22,7 +22,7 @@ pipeline {
         }
         stage('StartApplication'){
             steps {
-                sh "nohup java -jar target/JobAppFile.jar > app.log 2>&1 &"
+                sh "nohup java -jar target/JobApp-0.0.1-SNAPSHOT.jar > app.log 2>&1 &"
                 echo 'application started'
             }
         }
