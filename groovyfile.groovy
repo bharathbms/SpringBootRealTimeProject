@@ -5,5 +5,6 @@ def build(){
         sh 'mvn clean package -DskipTests'
     }*/
     sh 'mvn clean package -DskipTests'
+    sh 'mvn clean install'
 }
 return this
